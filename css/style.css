@@ -71,8 +71,8 @@ ul li i {
 }
 
 .btn_round {
-    width: 40px;
-    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,7 +104,7 @@ header {
 }
 
 .box_info_header {
-    width: 30%;
+    width: 35%;
 }
 
 .box_info_header h1 {
@@ -117,9 +117,59 @@ header {
 .box_info_header .buttons_header {
     margin-top: 30px;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
+.buttons_header .btn_red {
+    margin-right: 15px;
+}
+
+
+@media screen and (min-width: 737px) and (max-width: 1279px) {
+
+    .box_info_header {
+        width: 75%;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 736px) {
+
+    .box_info_header {
+        width: 90%;
+    }
+
+    header {
+        background-position: -600px;
+    }
+
+    .box_info_header h1 {
+        font-size: 52px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    header {
+        background-position: -700px;
+    }
+
+    .box_info_header {
+        width: 100%;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+
+    .box_info_header h1 {
+        font-size: 52px;
+    }
+
+    .box_info_header .buttons_header {
+        
+        justify-content: space-between;
+    }
+}
 
 /* FINE HEADER=================================================================================== */
 
@@ -176,6 +226,91 @@ section.innovation .container {
     background-repeat: no-repeat;
 }
 
+@media screen and (min-width: 737px) and (max-width: 1279px) {
+
+    .innovation_text {
+        width: calc(40% - 30px);
+    }
+
+    .innovation_text  h2 {
+        font-size: 36px;
+
+    }
+
+    .innovation_text p {
+        line-height: 25px;
+        font-size: 16px;
+    }
+
+    .innovation_img {
+
+        background-position: right;
+        background-size: auto;
+
+    }
+    
+}
+
+@media screen and (min-width: 480px) and (max-width: 736px) {
+
+    section.innovation .container {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+
+    .innovation_text {
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    .innovation_img {
+        height: 200px;
+        width: 90%;
+
+    }
+
+    .innovation_text  h2 {
+        font-size: 32px;
+
+    }
+
+    .innovation_text p {
+        line-height: 25px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    section.innovation .container {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+
+    .innovation_text {
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    .innovation_img {
+        height: 200px;
+        width: 100%;
+
+    }
+
+    .innovation_text  h2 {
+        font-size: 32px;
+
+    }
+
+    .innovation_text p {
+        line-height: 25px;
+        font-size: 16px;
+    }
+}
+
 
 
 /* FINE SEZIONE INNOVATION---------------------------------------------------------------- */
@@ -196,6 +331,37 @@ section.cut_machine h2 {
     font-weight: 200;
     padding-bottom: 30px;
     border-bottom: 2px solid #dadada;
+}
+
+@media screen and (min-width: 737px) and (max-width: 1279px) {
+    section.cut_machine h2 {
+        font-size: 40px;
+    }
+    
+}
+
+@media screen and (min-width: 481px) and (max-width: 736px) {
+    section.cut_machine h2 {
+        font-size: 34px;
+    }
+    section.cut_machine {
+        
+        max-height: 750px;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+
+    section.cut_machine h2 {
+        font-size: 30px;
+    }
+
+    section.cut_machine {
+        
+        max-height: 600px;
+    }
+    
 }
 
 /* FORMATTAZIONE DEGLI SLIDER PRODOTTO */
@@ -248,7 +414,6 @@ section.cut_machine h2 {
 }
 
 .info_slider ul li {
-    list-style: none;
     font-size: 18px;
 }
 
@@ -263,6 +428,137 @@ section.cut_machine h2 {
 }
 
 
+@media screen and (min-width: 1280px) {
+
+    .slider {
+        justify-content: space-between;
+    }
+
+    .objects_slider {
+        flex-grow: 0;
+
+    }
+    
+}
+
+@media screen and (min-width: 737px) and (max-width: 1279px) {
+
+    .info_slider h3 {
+        font-size: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .info_slider ul {
+        line-height: 24px;
+        margin-bottom: 15px;  
+    }
+    
+    .info_slider ul li {
+        font-size: 16px;
+    }
+
+    .info_slider a {
+        font-size: 16px;
+        margin-top: 10px;
+
+    }
+
+    .info_slider {
+        flex-grow: 2;
+    }
+    
+    .objects_slider .img_slider img {
+        max-height: 450px;
+        max-width: 300px;
+    }
+
+    .info_slider .btn_red {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 736px) {
+
+    .objects_slider .img_slider {
+        height: 400px;
+    }
+
+    .objects_slider .img_slider img {
+        max-height: 250px;
+        max-width: 150px;
+    }
+
+    .info_slider h3 {
+        font-size: 25px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .info_slider ul {
+        line-height: 20px;
+        margin-bottom: 15px;  
+    }
+    
+    .info_slider ul li {
+        font-size: 14px;
+    }
+
+    .info_slider a {
+        font-size: 14px;
+        margin-top: 0px;
+
+    }
+
+    .info_slider {
+        flex-grow: 2;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+
+    .objects_slider .img_slider {
+        display: none;
+    }
+
+
+    .info_slider h3 {
+        font-size: 25px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    .info_slider ul {
+        line-height: 20px;
+        margin-bottom: 15px;  
+    }
+    
+    .info_slider ul li {
+        font-size: 14px;
+    }
+
+    .info_slider a {
+        font-size: 14px;
+        margin-top: 0px;
+
+    }
+
+    .info_slider {
+        margin-left: 10px;
+        margin-right: 10px;
+
+    }
+
+    .btn_box {
+        text-align: center;
+    }
+
+    .info_slider {
+        align-items: center;
+    }
+}
 
 
 /* FINE SEZIONE CUT_MACHINE---------------------------------------------------------------- */
@@ -285,6 +581,37 @@ section.welding_machine h2 {
     border-bottom: 2px solid #dadada;
 }
 
+@media screen and (min-width: 737px) and (max-width: 1279px) {
+    section.welding_machine h2 {
+        font-size: 40px;
+    }
+    
+}
+
+@media screen and (min-width: 481px) and (max-width: 736px) {
+    section.welding_machine h2 {
+        font-size: 34px;
+    }
+
+    section.welding_machine {
+        
+        max-height: 750px;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+
+    section.welding_machine h2 {
+        font-size: 30px;
+    }
+
+    section.welding_machine {
+        
+        max-height: 600px;
+    }
+    
+}
 
 /* FINE SEZIONE WELDING_MACHINE---------------------------------------------------------- */
 
@@ -317,6 +644,50 @@ section.more_info {
     margin-bottom: 45px;
 }
 
+
+
+@media screen and (min-width: 737px) and (max-width: 1279px) {
+
+    .more_info h3 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .more_info p {
+        max-width: 70%;
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 736px) {
+
+    .more_info h3 {
+        font-size: 38px;
+        text-align: center;
+    }
+
+    .more_info p {
+        max-width: 90%;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .more_info h3 {
+        font-size: 34px;
+        text-align: center;
+    }
+
+    .more_info p {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    
+}
 /* FINE MORE_INFO SECTION---------------------------------------------------------------------- */
 
 
@@ -324,6 +695,7 @@ section.more_info {
 
 section.clients {
     padding-top: 100px;
+    padding-bottom: 30px;
     background-color: #F6F6F6;
     min-height: 750px;
 }
@@ -345,7 +717,7 @@ section.clients h2 {
 
 .box_rewiews .box_client {
     background-color: #ffffff;
-    width: 550px;
+    width: calc(50% - 20px);
     height: 340px;
     padding: 30px;
 }
@@ -382,6 +754,89 @@ section.clients h2 {
     margin-right: 20px;
 }
 
+
+@media screen and (min-width: 737px) and (max-width: 1279px) {
+
+    section.clients .container h2 {
+        font-size: 40px;
+    }
+
+    .box_rewiews .box_client {
+        padding: 20px;
+    }
+
+    .box_client p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    
+}
+
+@media screen and (min-width: 481px) and (max-width: 736px) {
+
+    section.clients .container h2 {
+        font-size: 34px;
+    }
+
+    .box_rewiews {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .box_rewiews .box_client {
+
+        width: 90%;
+        max-height: 270px;
+        padding: 20px;
+    }
+
+    .box_rewiews .box_client:first-child {
+        margin-bottom: 20px;
+    }
+    
+    .clients_buttons {
+        justify-content: center;
+    }
+
+    .box_client p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    section.clients .container h2 {
+        font-size: 30px;
+    }
+
+    .box_rewiews {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .box_rewiews .box_client {
+
+        width: 100%;
+        max-height: 270px;
+        padding: 20px;
+    }
+
+    .box_rewiews .box_client:first-child {
+        margin-bottom: 20px;
+    }
+    
+    .clients_buttons {
+        justify-content: center;
+    }
+
+    .box_client p {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    
+}
+
 /* FINE CLIENTS SECTION---------------------------------------------------------------------- */
 
 
@@ -398,13 +853,63 @@ section.advantages .container h2 {
     font-size: 48px;
     font-weight: 100;
     line-height: 58px;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
     border-bottom: 2px solid #dadada;
 }
 
 section.advantages .container ul {
     font-size: 18px;
     line-height: 30px;
+}
+
+
+@media screen and (min-width: 737px) and (max-width: 1279px) {
+
+    section.advantages .container h2 {
+        margin-right: 120px;
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    section.advantages .container ul {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    
+}
+
+@media screen and (min-width: 481px) and (max-width: 736px) {
+
+    section.advantages .container h2 {
+        margin-right: 40px;
+        font-size: 30px;
+        line-height: 34px;
+    }
+
+    section.advantages .container ul {
+        font-size: 15px;
+        line-height: 22px;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+
+    section.advantages .container {
+        flex-wrap: wrap;
+    }
+
+    section.advantages .container h2 {
+        margin-right: 40px;
+        font-size: 30px;
+        line-height: 34px;
+    }
+
+    section.advantages .container ul {
+        font-size: 15px;
+        line-height: 22px;
+    }
+    
 }
 
 
@@ -452,6 +957,63 @@ section.contacts .container {
     font-weight: 600;
     color: #C9252C;
     cursor: pointer;
+}
+
+@media screen and (min-width: 737px) and (max-width: 1279px) {
+
+    .box_contact_us h2 {
+        font-size: 40px;
+    }
+    .box_contact_us p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 736px) {
+
+    section.contacts .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .box_contact_us {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .box_contact_us h2 {
+        font-size: 34px;
+    }
+    .box_contact_us p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+
+    section.contacts .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .box_contact_us {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    
+    .box_contact_us p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .box_contact_us h2 {
+        font-size: 30px;
+    }
+    
 }
 
 
@@ -512,6 +1074,55 @@ section.contacts .container {
     display: flex;
     margin-top: 50px;
 }
+
+@media screen and (min-width: 737px) and (max-width: 1279px) {
+
+    .form_contacts {
+        margin-left: 70px;
+        width: calc(70% - 70px);
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    
+}
+
+@media screen and (min-width: 481px) and (max-width: 736px) {
+
+    .form_contacts {
+        margin-left: 0px;
+        width: 90%;
+        margin-top: 30px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    .form_contacts .btn_box {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .form_contacts {
+        margin-left: 0px;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    .form_contacts .btn_box {
+        justify-content: center;
+    }
+    
+}
 /* FINE SECTION CONTACTS---------------------------------------------------------------------------- */
 
 
@@ -528,4 +1139,23 @@ footer .container {
     align-items: center;
     font-size: 16px;
     color: #ffffff;
+    text-align: center;
+}
+
+
+
+@media screen and (min-width: 481px) and (max-width: 736px) {
+
+    footer .container {
+        font-size: 12px;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+
+    footer .container {
+        font-size: 12px;
+    }
+    
 }
