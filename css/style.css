@@ -10,12 +10,22 @@ body {
     width: 100%;
     height: 100vh;
     font-family: 'Open Sans', sans-serif;
+    color: #444444;
+
 }
 
 .container {
     width: 80%;
     height: 100%;
     margin: auto;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li i {
+    color: #149B31;
 }
 
 
@@ -40,12 +50,40 @@ body {
     padding: 13px 20px;
     background-color: #C9252C;
     border-radius: 8px;
+    cursor: pointer;
+    color: #ffffff;
 }
 
 .btn_grey {
     padding: 13px 20px;
     background-color: #444444;
     border-radius: 8px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.btn_white {
+    padding: 13px 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #444444;
+}
+
+.btn_round {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    border-radius: 50%;
+    background-color: #C9252C;
+    cursor: pointer;
+}
+
+.btn_box {
+    display: flex;
 }
 
 
@@ -100,8 +138,6 @@ main {
 section.innovation {
     height: 440px;
     margin-bottom: 120px;
-
-    color: #444444;
 }
 
 section.innovation .container {
@@ -150,7 +186,7 @@ section.innovation .container {
 section.cut_machine {
     background-color: #F6F6F6;
     padding-top: 100px;
-    color: #444444;
+    height: 800px;
 }
 
 section.cut_machine h2 {
@@ -162,11 +198,334 @@ section.cut_machine h2 {
     border-bottom: 2px solid #dadada;
 }
 
+/* FORMATTAZIONE DEGLI SLIDER PRODOTTO */
+
+.slider {
+    display: flex;
+    align-items: center;
+}
+
+
+.objects_slider {
+    flex-grow: 2;
+    display: flex;
+    max-height: 610px;
+}
+
+.objects_slider .img_slider {
+    height: 610px;
+    display: flex;
+    align-items: center;
+}
+
+
+.objects_slider .img_slider img {
+    max-height: 610px;
+}
+
+.info_slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info_slider h4 {
+    text-transform: uppercase;
+}
+
+.info_slider h3 {
+    font-size: 36px;
+    font-weight: 200;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #C9252C;
+}
+
+.info_slider ul {
+    line-height: 30px;
+    margin-bottom: 30px;
+
+}
+
+.info_slider ul li {
+    list-style: none;
+    font-size: 18px;
+}
+
+.info_slider .btn_red {
+    margin-bottom: 20px;
+}
+
+.info_slider a {
+    color: #444444;
+    font-size: 18px;
+    margin-top: 20px;
+}
 
 
 
 
 /* FINE SEZIONE CUT_MACHINE---------------------------------------------------------------- */
 
+/* INIZIO SEZIONE WELDING_MACHINE---------------------------------------------------------- */
 
 
+section.welding_machine {
+    background-color: #ffffff;
+    padding-top: 100px;
+    height: 800px;
+}
+
+section.welding_machine h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 200;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #dadada;
+}
+
+
+/* FINE SEZIONE WELDING_MACHINE---------------------------------------------------------- */
+
+/* MORE_INFO SECTION---------------------------------------------------------------------- */
+
+section.more_info {
+    background-color: #C9252C;
+    color: #ffffff;
+    height: 540px;
+}
+
+.more_info .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.more_info h3 {
+    font-size: 48px;
+    font-weight: 200;
+    margin-bottom: 45px;
+}
+
+.more_info p {
+    max-width: 50%;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 45px;
+}
+
+/* FINE MORE_INFO SECTION---------------------------------------------------------------------- */
+
+
+/* CLIENTS SECTION---------------------------------------------------------------------- */
+
+section.clients {
+    padding-top: 100px;
+    background-color: #F6F6F6;
+    min-height: 750px;
+}
+
+section.clients h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 200;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #dadada;
+}
+
+.box_rewiews {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.box_rewiews .box_client {
+    background-color: #ffffff;
+    width: 550px;
+    height: 340px;
+    padding: 30px;
+}
+
+.box_client {
+    font-size: 18px;
+    line-height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info_client_rewiew {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info_client_rewiew .info_client .name_client {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.vote_rewiew i {
+    padding: 0px 2px;
+}
+
+.clients_buttons {
+    margin-top: 25px;
+    display: flex;
+}
+
+.clients_buttons div:first-child {
+    margin-right: 20px;
+}
+
+/* FINE CLIENTS SECTION---------------------------------------------------------------------- */
+
+
+/* ADVANTAGES SECTION---------------------------------------------------------------------- */
+
+section.advantages .container {
+    display: flex;
+    padding: 70px 0px;
+}
+
+section.advantages .container h2 {
+    margin-right: 150px;
+    max-width: 360px;
+    font-size: 48px;
+    font-weight: 100;
+    line-height: 58px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #dadada;
+}
+
+section.advantages .container ul {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+
+/* FINE ADVANTAGES SECTION---------------------------------------------------------------------- */
+
+
+/* SECTION CONTACTS---------------------------------------------------------------------------- */
+
+section.contacts {
+    background-color: #F6F6F6;
+    padding: 100px 0px;
+}
+
+section.contacts .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box_contact_us {
+    max-width: 30%;
+}
+
+.box_contact_us h2 {
+    font-size: 48px;
+    font-weight: 200;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #dadada;
+}
+
+.box_contact_us p {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 25px;
+}
+
+.box_contact_us h4 {
+    font-size: 26px;
+    font-weight: 600;
+
+}
+
+.box_contact_us h4 span {
+    font-size: 24px;
+    font-weight: 600;
+    color: #C9252C;
+    cursor: pointer;
+}
+
+
+/* formattazione del form */
+
+.form_contacts {
+    margin-left: 130px;
+    width: calc(70% - 130px);
+}
+
+.form_input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.form_input input {
+    height: 46px;
+    border: 1px solid #D7D7D7;
+    margin-top: 3px;
+}
+
+.form_input textarea {
+    height: 120px;
+    border: 1px solid #D7D7D7;
+    margin-top: 3px;
+}
+
+.name_phone_box {
+    display: flex;
+}
+
+.name_phone_box .box_name {
+    width: 40%;
+    margin-right: 30px;
+}
+
+.name_phone_box .box_phone {
+    width: calc(60% - 30px);
+}
+
+.box_message span {
+    font-size: 15px;
+}
+
+.box_checkbox {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.box_checkbox input {
+    margin-right: 3px;
+}
+
+
+.form_contacts .btn_box {
+    display: flex;
+    margin-top: 50px;
+}
+/* FINE SECTION CONTACTS---------------------------------------------------------------------------- */
+
+
+/* FOOTER========================================================================================= */
+
+footer {
+    background-color: black;
+}
+
+footer .container {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #ffffff;
+}
