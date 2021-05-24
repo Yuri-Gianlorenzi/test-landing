@@ -73,26 +73,28 @@
                 <h2>Macchine per marcatura e taglio</h2>
 
                 <div class="slider">
-                    <div class="btn_prev btn_round">
+                    <div class="btn_prev btn_round" @click="prevCutMachines">
                         <i class="fas fa-chevron-left"></i>
                     </div>
                     
 
                     <div class="objects_slider">
                         <div class="img_slider">
-                            <img src="img/elettrolaser_taglio.png" alt="Elettrolaser Macchina da taglio">
+                            <img :src="cutMachines[indexCutMachines].img" alt="Elettrolaser Macchina da taglio">
                         </div>
 
                         <div class="info_slider">
-                            <h4>Prodotto 1/7</h4>
-                            <h3>FiberLUX 3D</h3>
+                            <h4>Prodotto {{ indexCutMachines + 1 }}/{{ cutMachines.length }}</h4>
+                            <h3></h3>
 
                             <ul>
-                                <li><i class="fas fa-check"></i> Taglio laser e incisione su oggetti inclinati, bombati o sferici</li>
+                                <li v-for="tip in cutMachines[indexCutMachines].tips"><i class="fas fa-check"></i> {{ tip }}</li>
+
+                                <!-- <li><i class="fas fa-check"></i> Taglio laser e incisione su oggetti inclinati, bombati o sferici</li>
                                 <li><i class="fas fa-check"></i> Incisioni su superfici irregolari aventi fino a 40 mm di scostamento</li>
                                 <li><i class="fas fa-check"></i> Scavi a layer e bassorilievi 3D</li>
                                 <li><i class="fas fa-check"></i> Incisioni di fotografie, nomi, disegni e loghi, compresi i marchi di fabbrica</li>
-                                <li><i class="fas fa-check"></i> Basso impatto ambientale e manutentivo</li>
+                                <li><i class="fas fa-check"></i> Basso impatto ambientale e manutentivo</li> -->
                             </ul>
 
                             <div class="btn_box">
@@ -104,7 +106,7 @@
                         </div>
                     </div>
 
-                    <div class="btn_next btn_round">
+                    <div class="btn_next btn_round"  @click="nextCutMachines">
                         <i class="fas fa-chevron-right"></i>
                     </div>
                 </div>
@@ -116,7 +118,7 @@
 
         <section class="welding_machine">
             <div class="container">
-                <h2>Macchine per marcatura e taglio</h2>
+                <h2>Macchine per la saldatura</h2>
 
                 <div class="slider">
                     <div class="btn_prev btn_round">
@@ -263,38 +265,38 @@
                     <div class="name_phone_box">
                         <div class="box_name form_input">
                             <label for="fname">Nome *</label>
-                            <input type="text" id="fname" name="fname">
+                            <input type="text" id="fname" name="fname" v-model="userName">
                         </div>
 
                         <div class="box_phone form_input">
                             <label for="fphone">Telefono *</label>
-                            <input type="text" id="fphone" name="fphone"> 
+                            <input type="text" id="fphone" name="fphone" v-model="userPhone"> 
                         </div>
                     </div>
 
                     <div class="box_mail form_input">
                         <label for="femail">E-Mail *</label>
-                        <input type="text" id="femail" name="femail">
+                        <input type="text" id="femail" name="femail" v-model="userMail">
                     </div>
 
                     <div class="box_message form_input">
                         <label for="fmessage">Messaggio *</label>
-                        <textarea id="fmessage" name="fmessage"></textarea>
+                        <textarea id="fmessage" name="fmessage" v-model="userMessage"></textarea>
                         <span>* Dati obbligatori</span>
                     </div>
 
 
                     <div class="box_checkbox">
-                        <input type="checkbox" id="data_processing" name="data_processing" value="true">
+                        <input type="checkbox" id="data_processing" name="data_processing" value="true" v-model="userDataManage">
                         <label for="data_processing"> Dichiaro di aver letto e di accettare le condizioni sul trattamento dei dati personali.</label>
                     </div>
 
                     <div class="box_checkbox">
-                        <input type="checkbox" id="newsletter" name="newsletter" value="true">
+                        <input type="checkbox" id="newsletter" name="newsletter" value="true" v-model="userNews">
                         <label for="newsletter"> Desidero iscrivermi alla newsletter e ricevere le comunicazioni di marketing di ElettroLaser, consapevole che potrò cancellare i miei dati in ogni momento.</label>
                     </div>
 
-                    <div class="btn_box">
+                    <div class="btn_box" @click="saveInfoUser">
                         <div class="btn_red">Invia messaggio</div>
                     </div>
                 </div>

@@ -346,7 +346,7 @@ section.cut_machine h2 {
     }
     section.cut_machine {
         
-        max-height: 750px;
+        max-height: 650px;
     }
     
 }
@@ -387,6 +387,7 @@ section.cut_machine h2 {
 
 .objects_slider .img_slider img {
     max-height: 610px;
+    max-width: 500px;
 }
 
 .info_slider {
@@ -516,11 +517,20 @@ section.cut_machine h2 {
     
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 515px) {
 
     .objects_slider .img_slider {
         display: none;
     }
+
+    .info_slider {
+        margin-left: 10px;
+        margin-right: 10px;
+
+    }
+}
+@media screen and (max-width: 480px) {
+
 
 
     .info_slider h3 {
@@ -545,11 +555,7 @@ section.cut_machine h2 {
 
     }
 
-    .info_slider {
-        margin-left: 10px;
-        margin-right: 10px;
-
-    }
+    
 
     .btn_box {
         text-align: center;
@@ -595,7 +601,7 @@ section.welding_machine h2 {
 
     section.welding_machine {
         
-        max-height: 750px;
+        max-height: 650px;
     }
     
 }
