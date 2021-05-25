@@ -93,6 +93,51 @@ var app = new Vue ({
                 ]
             },
         ],//fine weldMachines
+        indexClientsReviews : 0,
+        clientsReviews : [
+            {
+                name : 'Franco Z.',
+                job : 'Orafo',
+                vote : '5',
+                text : 'Molto disponibili e onesti. Sono rimasto davvero molto soddisfatto. 5 stelle meritate!'
+            },
+            {
+                name : 'Luca',
+                job : 'Saldatore di precisione',
+                vote : '4',
+                text : 'Le macchine da loro fornite risultano essere delle vere e proprie macchine per le incisioni, in grado di saldare il minimo pezzo di ferro ad un altro'
+            },
+            {
+                name : 'Yuri',
+                job : 'Gioielliere',
+                vote : '5',
+                text : 'Non so il motivo per cui ho comprato questo strumento, ma devo dire che è talmente bello che proverò ad usarlo ad ogni costo'
+            },
+            {
+                name : 'Angela',
+                job : 'Orafo',
+                vote : '5',
+                text : 'Credo che le 5 stelle bastino ad indicare la considerazione che ho di loro'
+            },
+            {
+                name : 'Franco Z.',
+                job : 'Orafo',
+                vote : '3',
+                text : 'Devo dare 2 stelle perchè io cercavo una banale saldatrice, e queste vanno ben oltre le mie capacità di utilizzarle'
+            },
+            {
+                name : 'Thor',
+                job : 'Dio del Tuono',
+                vote : '1',
+                text : 'Non ho bisogno di queste macchine per creare dei gioielli. Non ho bisogno di creare gioielli'
+            },
+            {
+                name : 'Anna',
+                job : 'Gioielliere',
+                vote : '4',
+                text : 'Peccato per il libretto delle istruzioni, non si trova la sezione scritta in italiano'
+            }
+        ],
         userName : '',
         userPhone : '',
         userMail : '',
@@ -140,6 +185,15 @@ var app = new Vue ({
 
         prevWeldMachines() {
             (this.indexWeldMachines <= 0) ? this.indexWeldMachines = this.weldMachines.length - 1 : this.indexWeldMachines = this.indexWeldMachines - 1;  
+        },
+
+        prevReviews() {
+            (this.indexClientsReviews <= 0) ? this.indexClientsReviews = this.clientsReviews.length - 1 : this.indexClientsReviews = this.indexClientsReviews - 1;
+        },
+
+        nextReviews() {
+            (this.indexClientsReviews < this.clientsReviews.length - 1) ? this.indexClientsReviews = this.indexClientsReviews + 1 : this.indexClientsReviews = 0;
+            console.log(this.indexClientsReviews);
         },
 
         saveInfoUser() {

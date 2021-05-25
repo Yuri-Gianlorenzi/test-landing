@@ -183,32 +183,33 @@
                 <div class="box_rewiews">
                     <div class="box_client">
 
-                        <p>Molto disponibili e onesti. Sono rimasto davvero molto soddisfatto. 5 stelle meritate!</p>
+                        <p>{{ clientsReviews[indexClientsReviews].text }}</p>
 
                         <div class="info_client_rewiew">
                             <div class="info_client">
-                                <p class="name_client">Franco z.</p>
-                                <p class="job_client">--Orafo</p>
+                                <p class="name_client">{{ clientsReviews[indexClientsReviews].name }}</p>
+                                <p class="job_client">--{{ clientsReviews[indexClientsReviews].job }}</p>
                             </div>
 
                             <div class="vote_rewiew">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <li v-for="n in 5" :class="(clientsReviews[indexClientsReviews].vote >= n) ? 'yellow' : ''"><i class="fas fa-star"></i></li>
                             </div>
                         </div>
 
                     </div>
 
                     <div class="box_client">
-                        <p>Avevo già acquistato una saldatrice da ElettroLaser e mi sono subito trovato benissimo. Quando è stato il momento di cambiare la marcatrice del mio laboratorio non ho avuto dubbi e sono andato a colpo sicuro. Le macchine hanno ottime prestazioni e il servizio clienti è impeccabile.</p>
+                        <p>{{ (indexClientsReviews == clientsReviews.length - 1) ? clientsReviews[0].text : clientsReviews[indexClientsReviews + 1].text }}</p>
 
                         <div class="info_client_rewiew">
                             <div class="info_client">
-                                <p class="name_client">Franco z.</p>
-                                <p class="job_client">--Orafo</p>
+                                <p class="name_client">{{ (indexClientsReviews == clientsReviews.length - 1) ? clientsReviews[0].name : clientsReviews[indexClientsReviews + 1].name }}</p>
+                                <p class="job_client">--{{ (indexClientsReviews == clientsReviews.length - 1) ? clientsReviews[0].job : clientsReviews[indexClientsReviews + 1].job }}</p>
                             </div>
 
                             <div class="vote_rewiew">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <li v-if="indexClientsReviews == clientsReviews.length - 1" v-for="n in 5" :class="(clientsReviews[0].vote >= n) ? 'yellow' : ''"><i class="fas fa-star"></i></li>
+                                <li v-if="indexClientsReviews < clientsReviews.length - 1" v-for="n in 5" :class="(clientsReviews[indexClientsReviews + 1].vote >= n) ? 'yellow' : ''"><i class="fas fa-star"></i></li>
                             </div>
                         </div>
 
@@ -217,12 +218,12 @@
 
                 <div class="clients_buttons">
 
-                    <div class="btn_prev btn_round">
+                    <div class="btn_prev btn_round" @click="prevReviews">
                         <i class="fas fa-chevron-left"></i>
                     </div>
 
 
-                    <div class="btn_next btn_round">
+                    <div class="btn_next btn_round" @click="nextReviews">
                         <i class="fas fa-chevron-right"></i>
                     </div>
 

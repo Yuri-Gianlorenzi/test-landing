@@ -747,6 +747,15 @@ section.clients h2 {
     font-weight: 700;
 }
 
+.vote_rewiew {
+    display: flex;
+    list-style: none;
+}
+
+.vote_rewiew .yellow {
+    color: #FFCC00;
+}
+
 .vote_rewiew i {
     padding: 0px 2px;
 }
