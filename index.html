@@ -85,7 +85,7 @@
 
                         <div class="info_slider">
                             <h4>Prodotto {{ indexCutMachines + 1 }}/{{ cutMachines.length }}</h4>
-                            <h3></h3>
+                            <h3>{{ cutMachines[indexCutMachines].name }}</h3>
 
                             <ul>
                                 <li v-for="tip in cutMachines[indexCutMachines].tips"><i class="fas fa-check"></i> {{ tip }}</li>
@@ -121,26 +121,27 @@
                 <h2>Macchine per la saldatura</h2>
 
                 <div class="slider">
-                    <div class="btn_prev btn_round">
+                    <div class="btn_prev btn_round" @click="prevWeldMachines">
                         <i class="fas fa-chevron-left"></i>
                     </div>
                     
 
                     <div class="objects_slider">
                         <div class="img_slider">
-                            <img src="img/elettrolaser_saldatura.png" alt="Elettrolaser Macchina da taglio">
+                            <img :src="weldMachines[indexWeldMachines].img" :alt="weldMachines[indexWeldMachines].name">
                         </div>
 
                         <div class="info_slider">
-                            <h4>Prodotto 1/7</h4>
-                            <h3>FiberLUX 3D</h3>
+                            <h4>Prodotto {{ indexWeldMachines + 1 }}/{{ weldMachines.length }}</h4>
+                            <h3>{{ weldMachines[indexWeldMachines].name }}</h3>
 
                             <ul>
-                                <li><i class="fas fa-check"></i> Taglio laser e incisione su oggetti inclinati, bombati o sferici</li>
+                                <li v-for="tip in weldMachines[indexWeldMachines].tips"><i class="fas fa-check"></i> {{ tip }}</li>
+                                <!-- <li><i class="fas fa-check"></i> Taglio laser e incisione su oggetti inclinati, bombati o sferici</li>
                                 <li><i class="fas fa-check"></i> Incisioni su superfici irregolari aventi fino a 40 mm di scostamento</li>
                                 <li><i class="fas fa-check"></i> Scavi a layer e bassorilievi 3D</li>
                                 <li><i class="fas fa-check"></i> Incisioni di fotografie, nomi, disegni e loghi, compresi i marchi di fabbrica</li>
-                                <li><i class="fas fa-check"></i> Basso impatto ambientale e manutentivo</li>
+                                <li><i class="fas fa-check"></i> Basso impatto ambientale e manutentivo</li> -->
                             </ul>
 
                             <div class="btn_box">
@@ -152,7 +153,7 @@
                         </div>
                     </div>
 
-                    <div class="btn_next btn_round">
+                    <div class="btn_next btn_round" @click="nextWeldMachines">
                         <i class="fas fa-chevron-right"></i>
                     </div>
                 </div>
