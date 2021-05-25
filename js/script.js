@@ -47,6 +47,52 @@ var app = new Vue ({
                 ]
             },
         ],//fine cutMachines
+        indexWeldMachines : 0,
+        weldMachines : [
+            {
+                img : 'img/elettrolaser_saldatura.png',
+                name : 'FiberLUX 3D',
+                tips : [
+                    'Taglio laser e incisione su oggetti inclinati, bombati o sferici',
+                    'Incisioni su superfici irregolari aventi fino a 40 mm di scostamento',
+                    'Scavi a layer e bassorilievi 3D',
+                    'Incisioni di fotografie, nomi, disegni e loghi, compresi i marchi di fabbrica',
+                    'Basso impatto ambientale e manutentivo'
+                ]
+            },
+            {
+                img : 'img/saldatura1.png',
+                name : 'Macchina 1',
+                tips : [
+                    'Costa poco, sembra una stampante, ma il suo dovere lo fà',
+                    'Non si inceppa',
+                    'Facile da usare',
+                    'Indistruttibile'
+                ]
+            },
+            {
+                img : 'img/saldatura2.jpg',
+                name : 'Macchina 2',
+                tips : [
+                    'Taglio laser e incisione su oggetti inclinati, bombati o sferici',
+                    'Costo medio',
+                    'Scavi a layer e bassorilievi 3D',
+                    'I pezzi di ricambio sono facili da trovare',
+                    'Leggermente rumorosa'
+                ]
+            },
+            {
+                img : 'img/saldatura3.jpg',
+                name : 'Macchina 3',
+                tips : [
+                    'Silenziosa',
+                    'Incisioni su superfici irregolari aventi fino a 40 mm di scostamento',
+                    'Necessita di poca corrente elettrica',
+                    'Incisioni di fotografie, nomi, disegni e loghi, compresi i marchi di fabbrica',
+                    'Basso impatto ambientale e manutentivo'
+                ]
+            },
+        ],//fine weldMachines
         userName : '',
         userPhone : '',
         userMail : '',
@@ -86,6 +132,14 @@ var app = new Vue ({
             // }
 
             (this.indexCutMachines <= 0) ? this.indexCutMachines = this.cutMachines.length - 1 : this.indexCutMachines = this.indexCutMachines - 1;
+        },
+
+        nextWeldMachines() {
+            (this.indexWeldMachines < this.weldMachines.length - 1) ? this.indexWeldMachines = this.indexWeldMachines + 1 : this.indexWeldMachines = 0;
+        },
+
+        prevWeldMachines() {
+            (this.indexWeldMachines <= 0) ? this.indexWeldMachines = this.weldMachines.length - 1 : this.indexWeldMachines = this.indexWeldMachines - 1;  
         },
 
         saveInfoUser() {
